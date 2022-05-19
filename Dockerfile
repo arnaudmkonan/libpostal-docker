@@ -1,8 +1,9 @@
-FROM ubuntu:16.04
+FROM ubuntu:20.04
 ENV DEBIAN_FRONTEND noninteractive
 RUN apt-get update && apt-get install -y \
     curl libsnappy-dev autoconf automake libtool pkg-config \
-    git
+    git \
+    make
 
 WORKDIR /
 RUN git clone https://github.com/openvenues/libpostal
